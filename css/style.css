@@ -1,0 +1,110 @@
+﻿ @font-face {
+  font-family: "BebasNeue-Regular";
+  src: url("../fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --bebas: "BebasNeue-Regular";
+  --oswald: "Oswald";
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #05010d;
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* HEADER */
+/* header{
+  background-color: rgba(46, 46, 46, 0.75);
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  opacity: 0.9;
+}
+.topo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+
+}
+
+.topo li{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.topo a {
+  background: linear-gradient(254deg, rgba(117, 0, 176, 1) 0%, rgba(168, 220, 171, 1) 63%);
+  color: transparent;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-decoration: none;
+}
+
+
+
+/* HOME */
+
+/* .titulo{
+  font-family: 'Arial', sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin-top: 230px;
+
+}
+.titulo h1{
+  letter-spacing: 50px;
+  font-family: var(--bebas);
+  color: #a8dcab;
+  
+}
+
+.titulo h1 span{
+  color: #ae44ff;
+  font-size: 125px;
+  background: linear-gradient(254deg,rgba(117, 0, 176, 1) 0%, rgba(249, 161, 255, 1) 81%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+
+}
+
+.titulo p{
+  font-family: var(--bebas);
+  color: #a8dcab;
+  font-size: 25px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+} */ 
