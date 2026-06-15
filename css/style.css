@@ -1,17 +1,4 @@
-﻿ @font-face {
-  font-family: "BebasNeue-Regular";
-  src: url("../fonts/BebasNeue-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-:root {
-  --bebas: "BebasNeue-Regular";
-  --oswald: "Oswald";
-}
-
-
-
+﻿/* nao apagar */
 * {
   margin: 0;
   padding: 0;
@@ -22,8 +9,8 @@ html,
 body {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  background: #05010d;
+
+
 }
 
 canvas {
@@ -34,77 +21,244 @@ canvas {
   height: 100%;
   display: block;
 }
-
 main {
   position: relative;
   z-index: 1;
 }
 
-/* HEADER */
-/* header{
-  background-color: rgba(46, 46, 46, 0.75);
-  padding: 20px;
-  backdrop-filter: blur(10px);
-  opacity: 0.9;
+/* nao apagar fim*/
+
+/* INICIO/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@import url("https://use.typekit.net/vde6jwv.css");
+@import url("https://use.typekit.net/vde6jwv.css");
+
+:root {
+  --azul-escuro: #000812;
+  --azul-florecente: #11118c;
+  --roxo: #4742d2;
+  --roxo‑violeta: #8148f0;
+  --preto: #000;
+  --branco: #fff;
+  --fonte-primeira: "montserrat", sans-serif;
 }
-.topo{
+
+.topo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--azul-escuro);
+  padding: 0.8rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+ 
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(124, 92, 255, 0.2);
+}
+
+.site {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  /* usar grid para controle */
+  grid-template-columns: auto 1fr auto;
+  /* logo | menu | pesquisa */
+  align-items: center;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+
+}
+
+.logo5 img {
+  height: 30px;
+  width: auto;
+}
+
+.logo-principal {
+  height: 80px;
+  width: auto;
+  gap: 10px;
+
+}
+
+.logo-secundaria {
+  height: 80px;
+  width: auto;
+  margin-left: 0;
+  /* remove espaço extra */
+  gap: 10px;
+}
+
+
+.menu ul {
   list-style: none;
-
+  display: flex;
+  justify-content: center;
+  /* centraliza os itens dentro do espaço do menu */
+  gap: 40px;
+  margin: 0;
+  padding: 0;
 }
 
-.topo li{
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.topo a {
-  background: linear-gradient(254deg, rgba(117, 0, 176, 1) 0%, rgba(168, 220, 171, 1) 63%);
-  color: transparent;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  -webkit-background-clip: text;
-  background-clip: text;
+.menu a {
+  position: relative;
+  color: #bebebe;
   text-decoration: none;
+  font-family: var(--fonte-primeira);
+  font-size: x-small;
+  transition: color 0.3s;
+}
+
+/* underline invisível inicialmente */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  /* distância do texto */
+  width: 0%;
+  height: 2px;
+  background: var(--branco);
+  transition: width 0.3s ease-in-out;
 }
 
 
 
-/* HOME */
 
-/* .titulo{
-  font-family: 'Arial', sans-serif;
-  font-size: 48px;
+/* QUANDO ROLAR */
+
+body {
+  padding-top: 50px;
+  /* ajuste conforme a altura do seu menu */
+}
+
+.topo div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.menu a:hover {
+  color: var(--branco);
+}
+
+/*BARRA DE PESQUISA*/
+.search-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  overflow: hidden;
+  width: 100px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(124, 92, 255, 0.2);
+  justify-content: center;
+
+}
+
+.search-container input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 12px 16px;
+  color: white;
+  outline: none;
+}
+
+.search-container button {
+  background: transparent;
+  border: none;
+  color: #7c5cff;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.search-container:focus-within {
+  border-color: #7c5cff;
+  box-shadow: 0 0 20px rgba(124, 92, 255, 0.5);
+}
+
+.titulo {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
-  margin-top: 230px;
-
-}
-.titulo h1{
-  letter-spacing: 50px;
-  font-family: var(--bebas);
-  color: #a8dcab;
-  
 }
 
-.titulo h1 span{
-  color: #ae44ff;
-  font-size: 125px;
-  background: linear-gradient(254deg,rgba(117, 0, 176, 1) 0%, rgba(249, 161, 255, 1) 81%);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  
+.logo-banner {
+  width: 180px;
+  height: auto;
+
+  margin-bottom: 25px;
+}
+
+.titulo h1 {
+  font-size: 6rem;
+  letter-spacing: 12px;
+}
+
+.titulo span {
+  color: #8148f0;
+}
+
+/* ==================================================
+   EFEITO UNDERLINE ANIMADO DO MENU
+   ================================================== */
+
+/* Criamos uma "linha falsa" usando o pseudo-elemento */
+.menu a::after {
+  /* obrigatório para o pseudo-elemento existir */
+  content: '';
+  position: absolute;
+  /* posiciona a linha logo abaixo do texto */
+
+  bottom: -6px;
+  left: 0;
+  /* largura igual à do link */
+  width: 100%;
+
+  /* espessura da linha */
+  height: 1px;
+
+  background: linear-gradient(90deg,
+      #4a5cff,
+      #8148f0);
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform .4s ease;
+}
+
+.menu a:hover::after {
+  transform: scaleX(1);
+}
+
+.sobre {
+ background-color: var(--azul-escuro);
+  width: 1920px;
+  height: 500px;
+}
+
+.sobre h1{
+font-family: agency-fb, sans-serif;
+font-style: normal;
+font-weight: 2;
+font-size: 300px;
+color: var(--branco);
+
+margin-left: 40px;
 
 }
 
-.titulo p{
-  font-family: var(--bebas);
-  color: #a8dcab;
-  font-size: 25px;
-  margin-top: 10px;
-  letter-spacing: 2px;
-} */ 
+/*botoes*/
