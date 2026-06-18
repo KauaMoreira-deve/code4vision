@@ -14,13 +14,14 @@ body {
 }
 
 canvas {
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: 0;
   width: 100%;
   height: 100%;
   display: block;
 }
+
 main {
   position: relative;
   z-index: 1;
@@ -32,7 +33,27 @@ main {
 @import url("https://use.typekit.net/vde6jwv.css");
 @import url("https://use.typekit.net/vde6jwv.css");
 
+
+
+@font-face {
+  font-family: 'BrunoAce-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bruno Ace SC Regular'),
+    url("../fonts/BrunoAce-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BebasNeue-Regular";
+  src: url(../fonts/BebasNeue-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
+  --font-bruno: "BrunoAce-Regular";
+  --bebas: "BebasNeue-Regular";
   --azul-escuro: #000812;
   --azul-florecente: #11118c;
   --roxo: #4742d2;
@@ -52,15 +73,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
- 
+
   z-index: 999;
   box-shadow: 0 0 15px rgba(124, 92, 255, 0.2);
 }
 
 .site {
   width: 100%;
-  max-width: 1400px;
-  display: grid;
+  max-width: 1500px;
+  margin: 0 auto;
   /* usar grid para controle */
   grid-template-columns: auto 1fr auto;
   /* logo | menu | pesquisa */
@@ -133,6 +154,7 @@ main {
 /* QUANDO ROLAR */
 
 body {
+  background-color: #000007;
   padding-top: 50px;
   /* ajuste conforme a altura do seu menu */
 }
@@ -141,7 +163,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
+
 }
 
 .menu a:hover {
@@ -185,30 +207,63 @@ body {
   box-shadow: 0 0 20px rgba(124, 92, 255, 0.5);
 }
 
-.titulo {
-  height: 100vh;
-
+.hero-cont {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  text-align: center;
+  flex-direction: column;
 }
 
-.logo-banner {
+.hero-cont h2 {
+  margin-top: 300px;
+  font-size: 50px;
+  color: #fff;
+  font-family: BrunoAce-Regular;
+  letter-spacing: 20px;
+}
+
+.hero-cont p {
+  font-family: var(--bebas);
+  font-size: 15px;
+  color: #fff;
+  font-family: BrunoAce-Regular;
+
+}
+
+.hero-cont h2 span {
+  font-family: BebasNeue-Regular;
+  font-size: 100px;
+  color: var(--roxo);
+}
+
+.botoes {
+  display: flex;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+.botoes button {
   width: 180px;
-  height: auto;
-
-  margin-bottom: 25px;
+  height: 40px;
+  background-color: rgba(104, 104, 104, 0.2);
+  border: #fff 1px solid;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
 }
 
-.titulo h1 {
-  font-size: 6rem;
-  letter-spacing: 12px;
+.botoes button:hover{
+  transform: scale(1.1);
+
 }
 
-.titulo span {
-  color: #8148f0;
+.botoes button a {
+  text-decoration: none;
+  color: #fff;
+  font-family: BebasNeue-Regular;
+}
+
+.botoes button:hover a{
+  color: #11118c;
 }
 
 /* ==================================================
@@ -245,20 +300,126 @@ body {
 }
 
 .sobre {
- background-color: var(--azul-escuro);
-  width: 1920px;
-  height: 500px;
+  margin-top: 600px;
+  width: 100%;
+  min-height: 500px;
+  height: auto;
+  padding-bottom: 40px;
 }
 
-.sobre h1{
-font-family: agency-fb, sans-serif;
-font-style: normal;
-font-weight: 2;
-font-size: 300px;
-color: var(--branco);
+.sobre h1 {
+  font-family: BrunoAce-Regular;
+  font-style: normal;
+  font-weight: 2;
+  font-size: 175px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 10px;
+  align-items: center;
+  color: var(--branco);
 
-margin-left: 40px;
+  margin-left: 40px;
 
+}
+
+.conteudo-sobre {
+  display: flex;
+}
+
+.sobre p {
+  color: #fff;
+  font-family: BebasNeue-Regular;
+  margin-left: 50px;
+  margin-top: 70px;
+}
+
+.notebook img {
+  width: 700px;
+  margin-top: 70px;
+}
+
+.carrossel {
+  width: 100vw;
+  height: 86px;
+  margin: 70px 0 0 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+.carrossel .slick-list,
+.carrossel .slick-track {
+  height: 100%;
+}
+
+.carrossel .slick-slide {
+  width: 170px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrossel img {
+  width: auto;
+  height: 52px;
+  max-width: 82px;
+  object-fit: contain;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.16));
+}
+
+.modelo-3d {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.modelo-area {
+  position: relative;
+  width: min(780px, calc(100vw - 40px));
+  height: 420px;
+  background: radial-gradient(circle at center, rgba(74, 92, 255, 0.18), rgba(3, 7, 18, 0.35) 55%, rgba(0, 0, 7, 0.7));
+  border: 1px solid rgba(129, 72, 240, 0.35);
+  border-radius: 8px;
+  box-shadow: 0 0 24px rgba(74, 92, 255, 0.18);
+  overflow: hidden;
+}
+
+.modelo-3d model-viewer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.modelo-status {
+  position: absolute;
+  inset: 0;
+  color: #fff;
+  font-family: var(--bebas);
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.modelo-error {
+  display: none;
+}
+
+.modelo-area.modelo-com-erro .modelo-loading {
+  display: none;
+}
+
+.modelo-area.modelo-com-erro .modelo-error {
+  display: flex;
+}
+
+.modelo-area.modelo-carregado .modelo-status {
+  display: none;
 }
 
 /*botoes*/

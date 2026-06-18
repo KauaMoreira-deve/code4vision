@@ -348,3 +348,60 @@ function render(time) {
 }
 
 requestAnimationFrame(render);
+
+// slick carrossel
+
+
+$(function () {
+  $('.carrossel').slick({
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    dots: false,
+    arrows: false,
+    infinite: true,
+    pauseOnHover: true,
+    pauseOnFocus: false,
+    speed: 5200,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    swipe: false,
+    touchMove: false,
+    variableWidth: true
+  });
+
+  $('[data-modelo-glb]').on('click', function () {
+    const novoModelo = $(this).data('modelo-glb');
+
+    $('#visualizadorGlb').attr('src', novoModelo);
+  });
+
+  const visualizadorGlb = document.getElementById('visualizadorGlb');
+  const areaModelo = document.querySelector('.modelo-area');
+
+  if (visualizadorGlb) {
+    setTimeout(function () {
+      if (!customElements.get('model-viewer')) {
+        const mensagemErro = areaModelo.querySelector('.modelo-error');
+
+        if (mensagemErro) {
+          mensagemErro.textContent = 'A biblioteca model-viewer não carregou. Verifique a internet ou use uma cópia local.';
+        }
+
+        areaModelo.classList.add('modelo-com-erro');
+      }
+    }, 3000);
+
+    visualizadorGlb.addEventListener('load', function () {
+      areaModelo.classList.add('modelo-carregado');
+      areaModelo.classList.remove('modelo-com-erro');
+    });
+
+    visualizadorGlb.addEventListener('error', function (event) {
+      areaModelo.classList.add('modelo-com-erro');
+      console.error('Erro ao carregar o modelo GLB:', event);
+    });
+  }
+});
+		
+	
