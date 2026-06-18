@@ -156,6 +156,7 @@ main {
 body {
   background-color: #000007;
   padding-top: 50px;
+  overflow: hidden;
   /* ajuste conforme a altura do seu menu */
 }
 

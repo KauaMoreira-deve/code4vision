@@ -122,32 +122,18 @@
       <section class="modelo-3d site">
         <div class="modelo-area">
           <model-viewer
-            id="visualizadorGlb"
-            src="./img/processo.glb"
-            camera-controls
-            auto-rotate
-            environment-image="neutral"
-            shadow-intensity="1"
-            exposure="1.8"
-            camera-orbit="0deg 90deg 2.6m"
-            camera-target="0m 0m 0m"
-            field-of-view="24deg"
-            reveal="auto"
-            loading="eager"
-            alt="Modelo 3D do processo">
-          </model-viewer>
-          <div class="modelo-status modelo-loading">Carregando modelo 3D...</div>
-          <div class="modelo-status modelo-error">Não foi possível carregar o modelo 3D.</div>
+            alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+            src="img/processo.glb" ar environment-image=""
+            poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls auto-rotate
+            touch-action="pan-y"></model-viewer>
+          
         </div>
       </section>
     </div>
   </main>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"
-    onerror="this.onerror=null;this.src='https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js';">
-  </script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
   <script src="js/slick.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/script.js"></script>
