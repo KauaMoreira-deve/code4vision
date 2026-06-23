@@ -34,7 +34,7 @@
       <nav class="menu">
         <ul>
           <li><a href="index.html">HOME</a></li>
-          <li><a href="servicos.html">SERVIÇOS</a></li>
+          <li><a href="#sobre">SERVIÇOS</a></li>
 
           <li><a href="contato.html">CONTATO</a></li>
           <li><a href="depoimentos.html">DEPOIMENTOS</a></li>
@@ -48,11 +48,6 @@
 
     </div>
   </header>
-
-
-
-
-
 
   <main>
     <div class="fundo-fixo">
@@ -72,7 +67,7 @@
 
       </section>
 
-      <section class="sobre site">
+      <section id="sobre" class="sobre site">
         <h1>SOBRE NÓS</h1>
         <div class="conteudo-sobre">
           <p>A Code4Vision nasceu da união de quatro desenvolvedores apaixonados por tecnologia e movidos pelo desejo de
@@ -120,20 +115,72 @@
       </section>
 
       <section class="modelo-3d site">
+
+
         <div class="modelo-area">
-          <model-viewer
-            alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
-            src="img/processo.glb" ar environment-image=""
-            poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls auto-rotate
-            touch-action="pan-y"></model-viewer>
-          
+          <model-viewer src="img/processo.glb" disable-zoom rotation-per-second="30deg" camera-controls auto-rotate
+            min-camera-orbit="auto 90deg auto" max-camera-orbit="auto 90deg auto" shadow-intensity="1"
+            touch-action="pan-y">
+          </model-viewer>
+
+
         </div>
+
       </section>
+
+      <section class="processo-trabalho">
+        <div class="imagem-linha">
+          <img src="img/linha-processo2.png" alt="">
+        </div>
+
+        <div class="tres-primeiros">
+
+          <article class="info-processo">
+            <img src="img/lupa.png" alt="">
+            <h2>01. Descoberta</h2>
+            <p>Entendemos seu negócio, objetivos e necessidades para criar a melhor solução.</p>
+          </article>
+          <article class="info-processo">
+            <img src="img/planejamento.png" alt="">
+            <h2>02. Planejamento</h2>
+            <p>Definimos a estratégia, estrutura e tecnologias que serão utilizadas no projeto.</p>
+          </article>
+          <article class="info-processo">
+            <img src="img/web-design.png" alt="">
+            <h2>03. Designe</h2>
+            <p>Criamos interfaces modernas, intuitivas e focadas na experiência do usuário. .</p>
+          </article>
+
+          <!-- info da direita--> 
+
+          <div class="tres-dois">
+            <article class="info-processo2">
+              <img src="img/lupa.png" alt="">
+              <h2>04. Desenvolvimento</h2>
+              <p>Transformamos o design em uma solução funcional, rápida e responsiva.</p>
+            </article>
+            <article class="info-processo2">
+              <img src="img/lupa.png" alt="">
+              <h2>05. Testes</h2>
+              <p>Validamos cada detalhe para garantir qualidade, desempenho e segurança.</p>
+            </article>
+            <article class="info-processo2">
+              <img src="img/lupa.png" alt="">
+              <h2>06. Lançamento</h2>
+              <p>Publicamos o projeto e oferecemos suporte para acompanhar sua evolução.</p>
+            </article>
+          </div>
+
+        </div>
+
+      </section>
+
+
     </div>
   </main>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js">
-    </script>
+  </script>
   <script src="js/slick.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/script.js"></script>
