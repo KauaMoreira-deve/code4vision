@@ -260,13 +260,13 @@ gl.useProgram(program);
    GEOMETRY
 ========================= */
 const vertices = new Float32Array([
-  -1,-1,
-   1,-1,
+  -1, -1,
+  1, -1,
   -1, 1,
 
   -1, 1,
-   1,-1,
-   1, 1
+  1, -1,
+  1, 1
 ]);
 
 const buffer = gl.createBuffer();
@@ -403,5 +403,4 @@ $(function () {
     });
   }
 });
-		
-	
+

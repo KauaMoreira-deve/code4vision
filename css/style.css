@@ -33,8 +33,35 @@ main {
 @import url("https://use.typekit.net/vde6jwv.css");
 @import url("https://use.typekit.net/vde6jwv.css");
 
+html {
+  /* O primeiro valor é a cor do "estojo" (o botão que arrasta) */
+  /* O segundo valor é a cor do "trilho" (o fundo da barra) */
+  scrollbar-color: #00E5FF #0A0A0C;
+  
+  /* Deixa a barra um pouco mais fina (opcional, combina com o estilo Duane Levi) */
+  scrollbar-width: thin; 
+}
 
+/* 1. Define a largura da barra */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+/* 2. A cor do fundo (o trilho) */
+::-webkit-scrollbar-track {
+  background: #0A0A0C; 
+}
+ 
+/* 3. A cor do botão que mexe (o scroll em si) */
+::-webkit-scrollbar-thumb {
+  background: #00E5FF; 
+  border-radius: 4px; /* Se quiser ele arredondado */
+}
+
+/* 4. Efeito quando passa o mouse por cima (Hover) */
+::-webkit-scrollbar-thumb:hover {
+  background: #00B3CC; 
+}
 @font-face {
   font-family: 'BrunoAce-Regular';
   font-style: normal;
@@ -301,7 +328,7 @@ body {
 }
 
 .sobre {
-  margin-top: 600px;
+  
   width: 100%;
   min-height: 500px;
   height: auto;
@@ -375,6 +402,7 @@ body {
   margin-top: 170px;
   display: flex;
   justify-content: center;
+  width: 100px;
 }
 
 .modelo-area {
@@ -410,7 +438,6 @@ body {
 }
 
 .tres-primeiros{
-  position: absolute;
   margin-top: -500px;
   margin-left: 200px;
 }
@@ -455,8 +482,9 @@ body {
 .tres-dois{
   position: absolute;
   margin-top: -530px;
-  margin-left: 200px;
+  margin-left: 500px;
   width: 200px;
+ 
 }
 
 .info-processo2{
@@ -467,9 +495,7 @@ body {
   margin-top: 76px;
   background-color: #000;
   margin-left: 1000px;
-  
-  
-  
+
 }
 
 .info-processo2 img{
@@ -488,6 +514,10 @@ body {
   margin-left: 100px;
   font-family: BebasNeue-Regular;
   font-size: 15px;
+}
+
+.projeto1 h2{
+  color: #fff;
 }
 
 
