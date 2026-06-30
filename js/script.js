@@ -370,6 +370,18 @@ $(function () {
     variableWidth: true
   });
 
+  $('.cont-depoi').slick({
+    autoplay: true,
+    autoplaySpeed: 4500,
+    arrows: true,
+    dots: true,
+    infinite: true,
+    pauseOnHover: true,
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    speed: 650
+  });
+
   $('[data-modelo-glb]').on('click', function () {
     const novoModelo = $(this).data('modelo-glb');
 
@@ -403,4 +415,33 @@ $(function () {
     });
   }
 });
+
+
+if (window.gsap && window.ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const portfolio = document.querySelector(".portfolio");
+  const container = document.querySelector(".container-scroll");
+
+  if (portfolio && container) {
+    const getScrollDistance = () =>
+      Math.max(0, container.scrollWidth - document.documentElement.clientWidth);
+
+    gsap.to(container, {
+      x: () => -getScrollDistance(),
+      ease: "none",
+      scrollTrigger: {
+        trigger: portfolio,
+        start: "top top",
+        end: () => `+=${getScrollDistance()}`,
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true
+      }
+    });
+
+    window.addEventListener("load", () => ScrollTrigger.refresh());
+  }
+}
 

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Foto ilustrada de Ana Martins</title>
+  <desc id="desc">Retrato ilustrado em fundo escuro com detalhes em azul e roxo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="24" y1="216" x2="216" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#081827"/>
+      <stop offset=".52" stop-color="#4734b5"/>
+      <stop offset="1" stop-color="#00c8e8"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="75" y1="218" x2="167" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#11118c"/>
+      <stop offset="1" stop-color="#8148f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="120" fill="url(#bg)"/>
+  <circle cx="184" cy="56" r="28" fill="#00e5ff" opacity=".16"/>
+  <circle cx="60" cy="194" r="42" fill="#ffffff" opacity=".08"/>
+  <path fill="#17101f" d="M68 111c0-41 22-70 57-70 36 0 59 27 59 68 0 46-27 76-58 76-34 0-58-31-58-74Z"/>
+  <path fill="#f1b78e" d="M81 107c0-30 18-51 43-51 27 0 46 21 46 51 0 32-19 57-45 57-25 0-44-25-44-57Z"/>
+  <path fill="#211523" d="M75 100c9-6 16-18 21-34 24 20 52 21 77 30-4-31-21-55-50-55-31 0-51 23-48 59Z"/>
+  <path fill="url(#shirt)" d="M52 219c7-35 33-57 73-57s66 22 73 57H52Z"/>
+  <path fill="#f6c7a3" d="M107 157h36v30c0 9-8 16-18 16s-18-7-18-16v-30Z"/>
+  <path fill="#fff" opacity=".9" d="M91 109c4-4 13-4 18 0-6 5-13 5-18 0Zm50 0c5-4 14-4 18 0-5 5-13 5-18 0Z"/>
+  <path fill="#a24a72" d="M111 137c8 6 19 6 27 0-2 9-25 9-27 0Z"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Foto ilustrada de Lucas Ribeiro</title>
+  <desc id="desc">Retrato ilustrado em fundo escuro com luzes azuis.</desc>
+  <defs>
+    <linearGradient id="bg" x1="28" y1="212" x2="212" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050814"/>
+      <stop offset=".55" stop-color="#112c6d"/>
+      <stop offset="1" stop-color="#00e5ff"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1="56" y1="220" x2="183" y2="145" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#02030c"/>
+      <stop offset="1" stop-color="#4742d2"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="120" fill="url(#bg)"/>
+  <circle cx="61" cy="62" r="34" fill="#8148f0" opacity=".2"/>
+  <circle cx="183" cy="183" r="48" fill="#00e5ff" opacity=".12"/>
+  <path fill="#171014" d="M72 101c0-37 21-62 53-62 35 0 57 26 57 66 0 35-21 65-55 65-33 0-55-30-55-69Z"/>
+  <path fill="#cf8c62" d="M84 105c0-30 17-50 42-50 26 0 44 20 44 50 0 34-18 58-43 58-25 0-43-24-43-58Z"/>
+  <path fill="#0e0a0f" d="M80 91c11-6 19-18 24-35 23 19 44 23 70 23-8-25-24-40-49-40-28 0-45 19-45 52Z"/>
+  <path fill="url(#jacket)" d="M47 220c9-36 38-59 79-59s69 23 78 59H47Z"/>
+  <path fill="#d99c74" d="M108 155h36v29c0 9-8 16-18 16s-18-7-18-16v-29Z"/>
+  <path fill="#101010" d="M91 109c6-5 17-5 23 0-7 3-16 3-23 0Zm47 0c6-5 17-5 23 0-7 3-16 3-23 0Z"/>
+  <path fill="#7a2f39" d="M111 137c8 6 20 6 28 0-3 8-25 8-28 0Z"/>
+</svg>
